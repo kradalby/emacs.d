@@ -25,10 +25,7 @@
 (add-to-list 'load-path site-lisp-dir)
 
 ;; Set up appearance early
-;;(require 'appearance)
-
-;; Add theme foled to path
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(require 'appearance)
 
 ;; Write backup files to own directory
 (setq backup-directory-alist
