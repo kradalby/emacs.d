@@ -52,8 +52,25 @@
   (packages-install
    '(magit
      dash
-     markdown-mode
+     helm
+     neotree
+     gist
+     monokai-theme
+
+     ;; Flycheck
      flycheck
+     flycheck-dialyzer
+
+     ;; Modes
+     web-mode
+     markdown-mode
+     js2-mode
+     less-css-mode
+     gitattributes-mode
+     gitconfig-mode
+     gitignore-mode
+     erlang
+     edts
      )))
 
 (condition-case nil
@@ -65,6 +82,9 @@
 ;; Lets start with a smattering of sanity
 ;; Stolen from https://github.com/magnars/.emacs.d
 (require 'sane-defaults)
+
+;; Map the different modes
+(require 'mode-map)
 
 ;; Setup environment variables from the user's shell on Mac.
 (when is-mac
