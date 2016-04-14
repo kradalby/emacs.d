@@ -60,6 +60,10 @@
      flycheck
      flycheck-dialyzer
 
+     ;; Auto-complete
+     auto-complete
+     jedi
+
      ;; Modes
      web-mode
      markdown-mode
@@ -87,6 +91,9 @@
 
 ;; Key-bindings
 (require 'key-bindings)
+
+;; Initiate auto-complete
+(ac-config-default)
 
 ;; Setup environment variables from the user's shell on Mac.
 (when is-mac
