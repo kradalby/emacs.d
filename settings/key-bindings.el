@@ -1,8 +1,8 @@
 
 
 ;; Magit
-(global-set-key (kbd "C-x m") 'magit-status-fullscreen)
-(autoload 'magit-status-fullscreen "magit")
+(global-set-key (kbd "C-x m") 'magit-status)
+
 
 (provide 'key-bindings)
 
