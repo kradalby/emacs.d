@@ -54,6 +54,7 @@
      helm
      neotree
      gist
+     evil
      monokai-theme
 
      ;; Flycheck
@@ -94,6 +95,10 @@
 
 ;; Initiate auto-complete
 (ac-config-default)
+
+;; Initiate EVIL mode
+(require 'evil)
+(evil-mode 1)
 
 ;; Setup environment variables from the user's shell on Mac.
 (when is-mac
