@@ -64,6 +64,7 @@
      ;; Auto-complete
      auto-complete
      jedi
+     tern-auto-complete
 
      ;; Modes
      web-mode
@@ -87,14 +88,20 @@
 ;; Stolen from https://github.com/magnars/.emacs.d
 (require 'sane-defaults)
 
-;; Map the different modes
-(require 'mode-map)
-
 ;; Key-bindings
 (require 'key-bindings)
 
-;; Initiate auto-complete
-(ac-config-default)
+;; Auto-complete
+(require 'autocomplete)
+
+;; Flycheck
+(require 'flycheck-config)
+
+
+;; Language spesific
+(require 'js2)
+(require 'erlang)
+(require 'web)
 
 ;; Initiate EVIL mode
 (require 'evil)
