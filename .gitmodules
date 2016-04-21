@@ -1,0 +1,9 @@
+[submodule "libs/distel"]
+	path = libs/distel
+	url = git@github.com:massemanet/distel.git
+[submodule "libs/company-distel"]
+	path = libs/company-distel
+	url = git@github.com:sebastiw/company-distel.git
+[submodule "libs/dash"]
+	path = libs/dash
+	url = git@github.com:magnars/dash.el.git
