@@ -1,6 +1,6 @@
 
 ;; Initiate auto-complete
-;; (ac-config-default)
+(ac-config-default)
 
 
 (setq ac-delay 0

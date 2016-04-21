@@ -73,8 +73,7 @@
      ;; Auto-complete
      auto-complete
      jedi
-     ;;tern-auto-complete
-     ac-js2
+     tern-auto-complete
 
      ;; Modes
      web-mode
