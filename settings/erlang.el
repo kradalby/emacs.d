@@ -2,13 +2,13 @@
 (require 'flycheck-dialyzer)
 (add-hook 'erlang-mode-hook 'flycheck-mode)
 
-;; ;; EQC Emacs Mode -- Configuration Start
-;; (add-to-list 'load-path "/usr/local/Cellar/erlang/18.3/lib/erlang/lib/eqc-1.37.2/emacs/")
-;; (autoload 'eqc-erlang-mode-hook "eqc-ext" "EQC Mode" t)
-;; (add-hook 'erlang-mode-hook 'eqc-erlang-mode-hook)
-;; (setq eqc-max-menu-length 30)
-;; (setq eqc-root-dir "/usr/local/Cellar/erlang/18.3/lib/erlang/lib/eqc-1.37.2")
-;; ;; EQC Emacs Mode -- Configuration End
+;; EQC Emacs Mode -- Configuration Start
+(add-to-list 'load-path "/usr/local/Cellar/erlang/18.3/lib/erlang/lib/eqc-1.37.2/emacs/")
+(autoload 'eqc-erlang-mode-hook "eqc-ext" "EQC Mode" t)
+(add-hook 'erlang-mode-hook 'eqc-erlang-mode-hook)
+(setq eqc-max-menu-length 30)
+(setq eqc-root-dir "/usr/local/Cellar/erlang/18.3/lib/erlang/lib/eqc-1.37.2")
+;; EQC Emacs Mode -- Configuration End
 
 ;; Erlang
 (setq erlang-root-dir "/usr/local/Cellar/erlang/18.3/lib/erlang")
@@ -34,7 +34,6 @@
       (make-symbol "emacs@localhost"))
 
 ;; company-distel
-(require 'auto-complete)
 (require 'auto-complete-distel)
 (add-hook 'erlang-mode-hook '(lambda () (add-to-list 'ac-sources 'distel-completions)))
 (setq distel-completion-get-doc-from-internet t)

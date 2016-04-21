@@ -73,7 +73,8 @@
      ;; Auto-complete
      auto-complete
      jedi
-     tern-auto-complete
+     ;;tern-auto-complete
+     ac-js2
 
      ;; Modes
      web-mode
@@ -109,6 +110,7 @@
 (require 'js2)
 (require 'erlang)
 (require 'web)
+(require 'py)
 
 ;; Initiate EVIL mode
 ;; (require 'evil)
