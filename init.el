@@ -95,6 +95,10 @@
 ;; Stolen from https://github.com/magnars/.emacs.d
 (require 'sane-defaults)
 
+;; Helm
+(require 'helm-config)
+(helm-mode 1)
+
 ;; Key-bindings
 (require 'key-bindings)
 
