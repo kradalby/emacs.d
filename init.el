@@ -99,6 +99,9 @@
 (require 'helm-config)
 (helm-mode 1)
 
+;; Gist
+(require 'gist)
+
 ;; Key-bindings
 (require 'key-bindings)
 
