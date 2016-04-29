@@ -1,6 +1,7 @@
 ;; Erlang
 (require 'flycheck-dialyzer)
 (add-hook 'erlang-mode-hook 'flycheck-mode)
+(add-hook 'erlang-mode-hook 'auto-complete-mode)
 
 ;; EQC Emacs Mode -- Configuration Start
 (add-to-list 'load-path "/usr/local/Cellar/erlang/18.3/lib/erlang/lib/eqc-1.37.2/emacs/")
@@ -36,6 +37,6 @@
 ;; company-distel
 (require 'auto-complete-distel)
 (add-hook 'erlang-mode-hook '(lambda () (add-to-list 'ac-sources 'distel-completions)))
-(setq distel-completion-get-doc-from-internet t)
+;; (setq distel-completion-get-doc-from-internet t)
 
 (provide 'erlang)

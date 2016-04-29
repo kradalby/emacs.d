@@ -1,6 +1,9 @@
 ;; Add theme foled to path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
+;; Font
+(set-default-font "Monaco 10")
+
 ;; Linenumbers
 (global-linum-mode t)
 
