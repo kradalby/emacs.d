@@ -2,7 +2,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Font
-(set-default-font "Monaco 10")
+(set-face-attribute 'default nil :font "Monaco-10" )
+(set-frame-font "Monaco-10" nil t)
 
 ;; Linenumbers
 (global-linum-mode t)
