@@ -39,6 +39,6 @@
 (setq distel-completion-valid-syntax "a-zA-Z:_-")
 
 (add-hook 'erlang-mode-hook 'flycheck-mode)
-;; (add-hook 'erlang-mode-hook 'auto-complete-mode)
+(add-hook 'erlang-mode-hook 'auto-complete-mode)
 
 (provide 'erlang)
