@@ -56,33 +56,43 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(magit
+   '(
      helm
      company
      popup
      neotree
-     gist
-     evil
+     ;;evil
      monokai-theme
+     auto-complete
+     flycheck
 
      ;; Flycheck
-     flycheck
      flycheck-tip
+
+     ;; erlang
      flycheck-dialyzer
 
-     ;; Auto-complete
-     auto-complete
+     ;; Python
      jedi
-     tern-auto-complete
 
-     ;; Modes
+     ;; web
      web-mode
      markdown-mode
      js2-mode
+     tern-auto-complete
      less-css-mode
+
+     ;; Git
+     magit
+     gist
      gitattributes-mode
      gitconfig-mode
      gitignore-mode
+
+     ;; OCaml
+     merlin
+     tuareg
+     flycheck-ocaml
      )))
 
 (condition-case nil
@@ -141,7 +151,9 @@
     ("c3c0a3702e1d6c0373a0f6a557788dfd49ec9e66e753fb24493579859c8e95ab" default)))
  '(js2-strict-inconsistent-return-warning nil)
  '(js2-strict-missing-semi-warning nil)
- '(package-selected-packages (quote (exec-path-from-shell markdown-mode magit flycheck))))
+ '(package-selected-packages
+   (quote
+    (flycheck-ocaml tuareg merlin exec-path-from-shell markdown-mode magit flycheck))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
