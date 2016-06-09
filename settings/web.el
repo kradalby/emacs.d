@@ -20,12 +20,15 @@
 
 ;; JSX
 (defadvice web-mode-highlight-part (around tweak-jsx activate)
-  (if (equal web-mode-content-type "jsx")
-      (let ((web-mode-enable-part-face nil))
-        ad-do-it)
-    ad-do-it))
+           (if (equal web-mode-content-type "jsx")
+             (let ((web-mode-enable-part-face nil))
+               ad-do-it)
+             ad-do-it))
 
-(flycheck-add-mode 'javascript-eslint 'web-mode)
+(with-eval-after-load 'flycheck
+                      (flycheck-add-mode 'html-tidy 'web-mode)
+                      (flycheck-add-mode 'javascript-eslint 'web-mode)
+                      )
 
 ;;(flycheck-define-checker jsx-checker
 ;;                         "A JSX syntax and style checker based on ESlint."
