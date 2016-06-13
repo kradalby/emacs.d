@@ -75,6 +75,9 @@
 ;; Don't break lines for me, please
 (setq-default truncate-lines t)
 
+;; Break lines for me, but not words
+(global-visual-line-mode t)
+
 ;; Keep cursor away from edges when scrolling up/down
 (require 'smooth-scrolling)
 
