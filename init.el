@@ -57,6 +57,7 @@
 (defun init--install-packages ()
   (packages-install
    '(
+     fiplr
      helm
      company
      popup
@@ -112,6 +113,10 @@
 ;; Gist
 (require 'gist)
 
+;; Fiplr
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "target" "node_modules" "env" "_build" "dist"))
+                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
+
 ;; Key-bindings
 (require 'key-bindings)
 
@@ -121,9 +126,8 @@
 ;; Flycheck
 (require 'flycheck-config)
 
-
 ;; Language spesific
-(require 'js2)
+; (require 'js2)
 (require 'erlang)
 (require 'web)
 (require 'py)
@@ -149,8 +153,6 @@
  '(custom-safe-themes
    (quote
     ("c3c0a3702e1d6c0373a0f6a557788dfd49ec9e66e753fb24493579859c8e95ab" default)))
- '(js2-strict-inconsistent-return-warning nil)
- '(js2-strict-missing-semi-warning nil)
  '(package-selected-packages
    (quote
     (flycheck-ocaml tuareg merlin exec-path-from-shell markdown-mode magit flycheck))))
