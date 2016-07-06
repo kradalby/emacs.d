@@ -43,6 +43,9 @@
                       (flycheck-add-mode 'json-jsonlint 'json-web-mode)
                       )
 
+;; Auto-complete
+(add-to-list 'ac-modes 'js-web-mode)
+
 ;; Load tern javascript engine
 (require 'tern)
 (add-hook 'js-web-mode-hook (lambda () (tern-mode t)))
