@@ -4,6 +4,8 @@
 ;; Font
 (set-face-attribute 'default nil :font "Monaco-10" )
 (set-frame-font "Monaco-10" nil t)
+(add-to-list 'default-frame-alist '(font . "Monaco-10" ))
+(set-face-attribute 'default t :font "Monaco-10" )
 
 ;; Linenumbers
 (global-linum-mode t)
